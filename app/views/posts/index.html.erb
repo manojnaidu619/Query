@@ -1,0 +1,13 @@
+<div class="container" align="center">
+  <% @post.each do |post| %>
+  <div class="card" style="width: 25rem;">
+    <div class="card-body">
+      <h3 class="card-title"><%= post.title %></h3>
+      <p class="card-text"><%= post.body %></p><br>
+      <%= link_to "SHOW", post_path(post), class:"btn btn-default" %>
+      <%= link_to "DELETE", post_path(post), class:"btn btn-default", method: :delete , data: {confirm: "Are you sure?"} %>
+    </div>
+  </div><br>
+  <% end %>
+  <%= link_to "HOME", root_path, class: "btn btn-success" %>
+</div>

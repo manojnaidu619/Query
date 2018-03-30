@@ -6,9 +6,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/navbar' %>
+    <div class="container" align="center">
+      <p class="notice alert" id="notice"><%= notice %></p>
+      <p class="alert alert" id="alert"><%= alert %></p>
+    </div>
+    <%= yield %><br><br><br><br>
+    <footer>
+      <hr>
+      <div class="container" align="center">
+        <h6>Copyrights by <a href="https://github.com/manojnaidu619" target="_blank">MANOJ NAIDU</a></h6>
+      </div><hr>
+    </footer>
   </body>
 </html>

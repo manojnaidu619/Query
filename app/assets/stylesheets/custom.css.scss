@@ -1,0 +1,23 @@
+#landing{
+  background-image: asset-url("landing3.jpg");
+  background-size: cover;
+}
+#landing_text{
+    color: white;
+}
+#posts_show{
+  border: 1px solid black;
+}
+
+.btn-primary, .btn-lg{
+  border: none !important;
+  background-color: darkgray !important;
+  color: white !important;
+}
+
+.btn-default{
+  border: 1px solid grey !important;
+}
+li{
+  list-style: none;
+}

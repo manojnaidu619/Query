@@ -1,0 +1,18 @@
+<div class="container">
+  <% if @post.errors.any? %>
+  <div class="container" align="center">
+    <strong><%= pluralize(@post.errors.count, "error") %> Occured: </strong>
+    <% @post.errors.each do |error,message| %>
+       <li><%= error.to_s + ' ' %><%= message.to_s %> </li>
+    <% end %>
+  </div>
+  <% end %>
+  <%= form_for @post, :html => {:multipart => true} do |f| %>
+    <%= f.label :Title %><br>
+    <%= f.text_field :title %><br><br>
+    <%= f.label :Body %><br>
+    <%= f.text_area :body, rows: '10', cols: '45' %><br>
+    <%= f.submit %>
+  <% end %><br><br>
+  <%= link_to "HOME", root_path ,class: "btn btn-info" %>
+</div>
